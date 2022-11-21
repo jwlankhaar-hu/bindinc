@@ -66,7 +66,12 @@ class _Settings:
         
         # Delimiter character for concatenated values 
         # of a multi-value NDJSON field.
-        'multivalue_delimiter': '|'
+        'multivalue_delimiter': '|',
+        
+        'chunk_dir': data_dir,
+        'chunck_prefix': 'binge_part_', 
+        'lines_per_chunk': 100,
+
     }
     
     
