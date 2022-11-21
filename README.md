@@ -6,6 +6,7 @@
 4. Eigenlijke code uitvoeren:
     - **import_binge.py**: om data te importeren
     - **ndjson_to_csv.py**: om NDJSON te converteren naar CSV
+    - **split_csv.py**: om CVS in kleinere delen te splitsen
     - **settings.py**: alle instellingen
 
 Paar opmerkingen:
