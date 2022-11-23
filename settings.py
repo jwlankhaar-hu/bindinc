@@ -70,9 +70,10 @@ class _Settings:
         
         'chunk_dir': data_dir,
         'chunck_prefix': 'binge_part_', 
-        'lines_per_chunk': 100,
+        'lines_per_chunk': 40000,
 
     }
+    delete_csv_after_split = False
     
     
 # In other modules, import the object, not the class.

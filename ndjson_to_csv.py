@@ -60,7 +60,7 @@ def main(ndjson_options, csv_options):
     multivalue_delim = csv_options['multivalue_delimiter']
     
     with (open(ndjson_file, 'rt', encoding='utf8') as f_ndjson, 
-          open(csv_file, csv_mode) as f_csv):
+          open(csv_file, csv_mode, encoding='utf8') as f_csv):
         reader = ndjson.reader(f_ndjson, strict=False)
         writer = csv.writer(f_csv, **csv_format)
         
