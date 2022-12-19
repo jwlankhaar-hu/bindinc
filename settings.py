@@ -41,6 +41,7 @@ class _Settings:
             'available.to',
             'available.channel',
             'available.channel.code',
+            'identifiers.id[source="Binge",level="program"]',
             'typology.genres',
             'production.countries',
             'production.year',

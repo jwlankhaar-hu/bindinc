@@ -18,3 +18,20 @@ Paar opmerkingen:
 - API-key staat in een apart bestand. Dat is wat veiliger en netter.
 
 Het omzetten naar CSV gebeurt recursief. Het is niet grondig getest; is dus nog wat kwetsbaar.
+
+# Release notes
+
+### 19 december 2022
+- Het is nu mogelijk om in `settings.export_fields` een filter toe te voegen voor nodes met lijsten. 
+  Voorbeeld:
+
+  ```python
+  export_fields : [...
+    'identifiers.id[source="Binge",level="program"]',
+    ...
+  ]
+  ```
+  Exporteer `identifiers` > `id` alleen als `source` gelijk is aan `Binge` en `level` gelijk aan `program`. 
+- Bug fixes:
+  - Check expliciet of CSV-bestand bestaat voor het al of niet toevoegen van rijkoppen (in plaats van afhankelijk van `csv_options.file_mode`).
+  - Cast te exporteren waarden altijd expliciet naar string.
