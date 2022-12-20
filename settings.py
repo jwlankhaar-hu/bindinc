@@ -35,20 +35,21 @@ class _Settings:
         # Append ('at') or overwrite ('wt') existing NDJSON file.
         'file_mode': 'wt',   # append: "at", overwrite: "wt"
         
-        # Fields to export (use dots for nested fields).
-        'export_fields' : [
-            'available.from',
-            'available.to',
-            'available.channel',
-            'available.channel.code',
-            'identifiers.id[source="Binge",level="program"]',
-            'typology.genres',
-            'production.countries',
-            'production.year',
-            'production.original_length',
-            'title.title',
-            'title.series.title'            
-        ]
+        # Specification of the fields to export. The export column 
+        # name is the key and JSONPath expression is the value.
+        # https://pypi.org/project/jsonpath-python/ 
+        'export_field_specifications' : {
+            'available.from':   '$.available[*].from',
+            'available.to':     '$.available[*].to',
+            'available.channel': '$.available[*].channel',
+            'available.channel.code': '$.available[*].channel_code',
+            'binge.program.id': '$.identifiers[?(@.source=="Binge" and @.level=="program")].id',
+            'production.country': '$.production.country[*]',
+            'production.year': '$.production.year',
+            'production.original_length': '$.production.original_length',
+            'production.title': '$.title.title',
+            'title.series_title': '$.title.series_title'            
+        }
     }
     
     csv_options = {
