@@ -35,3 +35,6 @@ Het omzetten naar CSV gebeurt recursief. Het is niet grondig getest; is dus nog 
 - Bug fixes:
   - Check expliciet of CSV-bestand bestaat voor het al of niet toevoegen van rijkoppen (in plaats van afhankelijk van `csv_options.file_mode`).
   - Cast te exporteren waarden altijd expliciet naar string.
+
+### 20 december 2022
+- Bug fix: selectief exporteren nu op basis van JSONPath specificatie.
